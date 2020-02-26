@@ -1,0 +1,145 @@
+html, body {
+  padding : 0;
+  margin : 0;
+  font-family: 'Open Sans';
+}
+
+.chevron {
+  position : absolute;
+  bottom : 10px;
+  left : 10px;
+
+  img {
+    width : 128px;
+    height : 128px;
+  }
+}
+
+.container {
+  position : relative;
+  width : 100%;
+  height : 100%;
+}
+
+
+
+.bgimage {
+  background-attachment: fixed;
+  background-image: url("../res/IMG_1796.JPEG");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+  position : absolute;
+  width : 100%;
+  height : 100%;
+  top : 0px;
+  left : 0px;
+}
+
+.home-screen {
+
+  background-color : #ffffffc4;
+
+  position : absolute;
+  width : 100%;
+  height : 100%;
+  top : 0px;
+  left : 0px;
+
+  h1 {
+    color : #000000;
+    font-size : 4em;
+    text-align : center;
+    padding-top : 2em;
+  }
+
+  .home-screen-container {
+    display : flex;
+    align-items : center;
+    justify-content : center;
+
+    * {
+      padding-right : 2em;
+      &:last-child {
+        padding : 0;
+      }
+    }
+
+    img {
+      flex : 1;
+
+      max-width : 25%;
+      max-height : 25%;
+    }
+  }
+}
+
+.lettercontainer {
+  margin : 5em;
+  padding : 0.5em;
+  background-color : #ffffffc4;
+
+  display : grid;
+  grid-template-columns : 60% 40%;
+  grid-template-areas : "letter images";
+
+  .letter {
+    grid-area : "letter";
+    margin-right : 7em;
+  }
+
+  .images {
+    grid-area : "images";
+
+    * {
+      width : 100%;
+      height : auto;
+      padding : 1em;
+    }
+
+    iframe {
+      height : 400px;
+    }
+  }
+}
+
+h2 {
+  padding-left : 1em;
+}
+
+.undersigned-container {
+  margin : 1em;
+  display : flex;
+  flex-wrap: wrap;
+
+  * { 
+    flex : 1;
+  }
+
+  .undersigned {
+    margin : 1em;
+
+    display : flex;
+
+    .profile {
+      max-width : 64px;
+      max-height : 64px;
+      border-radius : 100%;
+      flex : 1;
+    }
+
+    .content-container {
+      margin-left : 1em;
+      padding-left : 1em;
+      border-left : 1px solid gray;
+      flex : 4;
+    }
+  }
+}
+
+@media (max-width:1136px) {
+  .lettercontainer {
+    display : block;
+    margin-right : 0px; 
+  }
+}
